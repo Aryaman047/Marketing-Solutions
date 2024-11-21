@@ -1,0 +1,442 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFDF2; /* Cream */
+    color: #000000; /* Black */
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Header Section */
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap');
+
+  header {
+    height: 200vh;
+  }
+  
+  .container {
+    /* hide fixed overflow contents */
+    clip: rect(0, auto, auto, 0);
+  
+    /* does not work if overflow = visible */
+    overflow: hidden;
+  
+    /* only works with absolute positioning */
+    position: absolute;
+  
+    /* Make sure containers are full-width and height */
+    height: 100vh;
+    left: 0;
+    width: 100%;
+    
+    
+    /* safari hack */
+    -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%);
+  }
+  
+  .container_solid {
+    background: white;
+    
+    /* position this container at the top of its parent element */
+    top: 0;
+  }
+  
+  .title_wrapper {
+    position: fixed;
+    display: block;  
+    margin: auto;
+    width: 100%;
+    /* center the text wrapper vertically */
+    top: 40%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  
+  .title_wrapper h1 {
+    text-align: center;
+    font-size: 64px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+  }
+  
+  .container_solid .title_wrapper h1 {
+    /* the text background */
+    background: url(images/enterprisesimage.jpg);
+    background-size: 100vw auto;
+    background-position: center;
+    
+    /* clip the text is possible */
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+    /* fallback text color */
+    color: black;
+  }
+  
+  .container_image {
+    /* Grab a free image from unsplash */
+    background-image: url(images/enterprisesimage.jpg);
+    background-size:100vw auto;
+    background-position: center;
+    background-attachment: fixed;
+    
+    /* position the second container below the first container */
+    top: 100vh;
+  }
+  
+  .container_image .title_wrapper h1 {
+  
+  color: #fff; /* Base color for the text */
+  text-shadow: 
+    0 0 5px rgba(0, 255, 255, 0.7),
+    0 0 10px rgba(0, 255, 255, 0.7),
+    0 0 15px rgba(0, 255, 255, 0.7),
+    0 0 20px rgba(0, 255, 255, 0.7),
+    0 0 25px rgba(0, 255, 255, 0.7),
+    0 0 30px rgba(0, 255, 255, 0.7);
+  
+  }
+  
+  section {
+    padding: 2em;
+    margin: auto;
+    max-width: 800px;
+  }
+  
+  section h2 {
+    font-family: 'Fraunces', serif;
+  }
+  
+  section p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  }
+  /* Hero Section */
+  .hero {
+    background: url('images/enterprisesimage.jpg') no-repeat center center/cover;
+    color: #FFFDF2; /* Cream */
+    text-align: center;
+    padding: 120px 20px;
+  }
+  
+  .hero h2 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.5em;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  /* Services Section */
+  .services {
+    background-color: #FFFDF2; /* Cream */
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .services h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+  }
+  
+  .service-container {
+    display: flex;
+    justify-content: space-between; /* Distribute the service boxes evenly */
+    flex-wrap: wrap; /* Ensure the boxes wrap to the next line on smaller screens */
+    gap: 20px; /* Add space between the boxes */
+  }
+  
+  .service-box {
+    flex: 1 1 45%; /* This ensures each box takes 45% of the width, adjusting as needed */
+    margin: 20px 0; /* Vertical margin to separate the boxes */
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-box h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .service-box p {
+    font-size: 1.1em;
+    line-height: 1.5;
+  }
+  
+  /* Contact Section */
+  .contact-icons i {
+    font-size: 2rem;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .contact-icons i:hover {
+    transform: scale(1.2);
+  }
+
+  /* Styling for contact section */
+  #contact {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  #contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .contact-info div {
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .contact-info p {
+    margin-top: 10px;
+    color: black;
+  }
+
+  .contact-info a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+
+  .contact-info a:hover {
+    color: #007bff;
+  }
+
+  .contact-info i {
+    color: black;
+  }
+
+  /* Footer Section */
+  footer {
+    background-color: #106EBE; /* Blue */
+    color: #FFFDF2; /* Cream */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 1em;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header .logo h1 {
+      font-size: 2em;
+    }
+  
+    header ul {
+      display: block;
+      text-align: center;
+    }
+  
+    header ul li {
+      margin: 10px 0;
+    }
+  
+    .service-box {
+      width: 90%;
+      margin: 20px auto;
+    }
+  
+    .hero h2 {
+      font-size: 2.5em;
+    }
+  
+    .hero p {
+      font-size: 1.2em;
+      max-width: 90%;
+    }
+  
+    .contact h2 {
+      font-size: 2em;
+    }
+  
+    .email-form {
+      width: 100%;
+      padding: 30px;
+    }
+  
+    .email-form input, .email-form textarea {
+      font-size: 1em;
+    }
+  }
+  
+
+  /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+/* Contact Section */
+.section-bg {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 80px 0;
+}
+
+.contact-info {
+    color: #fff;
+    padding: 20px;
+}
+
+.contact-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #FFFDF2;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #FFFDF2;
+}
+
+.contact-info ul {
+    list-style: none;
+}
+
+.contact-info ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-info ul li .info-left {
+    font-size: 1.5em;
+    color: #0FFCBE;
+    margin-right: 20px;
+}
+
+.contact-info ul li .info-right h4 {
+    font-size: 1.2em;
+    color: #FFFDF2;
+}
+
+/* Contact Form */
+.contact-form {
+    background-color: #FFFDF2;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1em;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #106EBE;
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #106EBE;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0FFCBE;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-bg {
+        background-position: center top;
+    }
+
+    .overlay {
+        padding: 60px 0;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-form {
+        margin-top: 30px;
+    }
+
+    .contact-title {
+        font-size: 2em;
+    }
+
+    .contact-form button {
+        width: 100%;
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
